@@ -18,5 +18,6 @@ namespace Product.DAL
         }
 
         public DbSet<product> Products { get; set; }
+        public DbSet<Quality> Qualities { get; set; }
     }
 }

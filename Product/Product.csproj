@@ -125,8 +125,13 @@
     <Compile Include="Migrations\201904241112487_000-init.Designer.cs">
       <DependentUpon>201904241112487_000-init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905011120312_Quality.cs" />
+    <Compile Include="Migrations\201905011120312_Quality.Designer.cs">
+      <DependentUpon>201905011120312_Quality.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\product.cs" />
+    <Compile Include="Models\Quality.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -159,6 +164,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201904241112487_000-init.resx">
       <DependentUpon>201904241112487_000-init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905011120312_Quality.resx">
+      <DependentUpon>201905011120312_Quality.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

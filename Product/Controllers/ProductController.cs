@@ -26,13 +26,21 @@ namespace Product.Controllers
         [HttpGet]
         public ActionResult Create()
         {
+            var qualities = db.Qualities.ToList();
+            var selectList = new SelectList(qualities, "Id", "Caption");
+            ViewBag.Qualities = selectList;
+
             return View();
         }
 
         [HttpPost]
         public ActionResult Create(product entity)
         {
-            if(ModelState.IsValid)
+            var qualities = db.Qualities.ToList();
+            var selectList = new SelectList(qualities, "Id", "Caption");
+            ViewBag.Qualities = selectList;
+
+            if (ModelState.IsValid)
             {
 
             }
@@ -63,6 +71,10 @@ namespace Product.Controllers
         [HttpGet]
         public ActionResult Edit(int Id)
         {
+            var qualities = db.Qualities.ToList();
+            var selectList = new SelectList(qualities, "Id", "Caption");
+            ViewBag.Qualities = selectList;
+
             var entity = db.Products.Find(Id);
 
             if(entity == null)
@@ -76,11 +88,16 @@ namespace Product.Controllers
         [HttpPost]
         public ActionResult Edit(product entity)
         {
-          //  if(db.Products.Any(x => x.Id == entity.Id))
-         //   {
-           //     ViewBag.Message = "The Product Code is Already Entered";
-             //   return View(entity);
-          //  }
+            //  if(db.Products.Any(x => x.Id == entity.Id))
+            //   {
+            //     ViewBag.Message = "The Product Code is Already Entered";
+            //   return View(entity);
+            //  }
+
+            var qualities = db.Qualities.ToList();
+            var selectList = new SelectList(qualities, "Id", "Caption");
+            ViewBag.Qualities = selectList;
+
             db.Entry(entity).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Index");

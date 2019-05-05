@@ -31,6 +31,12 @@
     </div>
     <br />
     <div class="form-group">
+        @Html.DisplayNameFor(x => x.QualityId)
+        @Html.DropDownListFor(x => x.QualityId, (SelectList)ViewBag.Qualities, new { @class = "form-control"})
+        @Html.ValidationMessageFor(x => x.QualityId)
+    </div>
+    <br />
+    <div class="form-group">
         <input type="submit" value="Save" class="btn btn-success" />
     </div>
 }

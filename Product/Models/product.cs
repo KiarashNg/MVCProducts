@@ -18,5 +18,9 @@ namespace Product.Models
         public string ModelNo { get; set; }
         [Display(Name ="Description")]
         public string Description { get; set; }
+        //[Required]
+        [Display(Name ="Quality")]
+        public int? QualityId { get; set; }
+        public virtual Quality Quality { get; set; }
     }
 }

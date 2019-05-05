@@ -24,6 +24,9 @@
         <th>
             @Html.DisplayNameFor(x => x.FirstOrDefault().Description)
         </th>
+        <th>
+            @Html.DisplayNameFor(x => x.FirstOrDefault().QualityId)
+        </th>
     </tr>
 
     @foreach (var item in Model)
@@ -37,6 +40,9 @@
     </td>
     <td>
         @item.Description
+    </td>
+    <td>
+        @item.Quality.Caption
     </td>
     <td>
         @Html.ActionLink("Edit", "Edit", new { Id = item.Id }, new { @class = "btn btn-warning" })
